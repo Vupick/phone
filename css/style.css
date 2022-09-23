@@ -38,15 +38,17 @@ body{
 }
 
 .menu{
-display: flex;
-flex-grow: 1;
-flex-basis: 0;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 .phone{
-flex-grow: 1;
-flex-basis: 0;
-text-align:right;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align:right;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .menu-item{
@@ -54,9 +56,9 @@ text-align:right;
 }
 
 .headline{
-background-color:  #f5f5f7;
-text-align: center;
-padding: 70px 0 40px;
+    background-color:  #f5f5f7;
+    text-align: center;
+    padding: 70px 0 40px;
 }
 
 .title{
@@ -204,6 +206,23 @@ margin-bottom: 20px;
     padding: 16px 81px;
     font-weight: 700;
     cursor: pointer;
-
-
 }
+
+.footer{
+    background-color:#0A0A0A;
+}
+
+.footer-link{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.footer-inner{
+    color: #717171;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+
