@@ -225,11 +225,31 @@ margin-bottom: 20px;
     padding: 50px 0;
 }
 
+.menu-btn{
+    display: none;
+}
+
 
 
 @media (max-width: 1200px){
     .headline-img{
         max-width: 100%;
+    }
+    .contacts-inner{
+        display: block;
+    }
+    .contacts-form{
+        width: auto;
+        padding: 140px 90px 154px;
+    }
+    .contact-title{
+        text-align: center;
+    }
+    .contacts-img{
+        width: 100%;
+    }
+    .contacts{
+        background: #574B56;
     }
 }
 
@@ -245,6 +265,42 @@ margin-bottom: 20px;
 }
 
 @media (max-width: 940px){
+    .menu-btn{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        order: 1;
+        position: relative;
+    }
+
+    .btn-line{
+         position: absolute;   
+        left: 0;
+        width: 100%;
+        background: #fff;
+        height: 2px;
+    }
+
+    .btn-line:nth-child(1){
+        top: 0;
+    }
+    .btn-line:nth-child(2){
+        top: 20px;
+    }
+    .btn-line:nth-child(3){
+        top: 20px;
+    }
+    .btn-line:nth-child(4){
+        top: 40px;
+    }
+
+    .menu{
+        display: none;
+    }
+
     .images-new{
         display: none;
     }
@@ -252,6 +308,37 @@ margin-bottom: 20px;
     .new-text b{
     max-width: 100%;
     }  
+    .contacts-form p{
+        padding: 0 60px 15px;
+    } 
+    .phone{
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px){
+    .headline,
+    .new{
+        padding: 50px 0;
+    }
+    .color{
+        padding-bottom: 50px;
+    }
+    .contacts-form{
+        padding: 50px 70px;
+    }
+
+
+}
+
+@media (max-width: 640px){
+    .footer-inner{
+        padding: 20px 0;
+        flex-direction: column;
+    }
+    .footer-inner .logo{
+        margin: 15px 0;
+    }
 }
 
 @media (max-width: 560px){
@@ -260,22 +347,41 @@ margin-bottom: 20px;
         line-height: 42px;
     }
 
-    .new-title, .color-title{
+    .new-title, .color-title, .contact-title{
         font-size: 28px;
         line-height: 32px;
     }
 
 
     .headline-btn {
-    font-size: 12px;
-    line-height: 22px;
-    padding: 16px 90px 16px;
+        font-size: 12px;
+        line-height: 22px;
+        padding: 16px 90px 16px;
     }
     
     .color-item,
     .color-item img{
         width: 100%;
     }
+    
+    .contacts-form p{
+        padding: 0 10px;
+    }
+
+    .contacts-form{
+        padding: 50px 30px;
+    }
+
+}
+
+@media (max-width: 375px){
+    .contacts-form{
+        padding: 50px 10px;
+    }
+
+     .contacts-form p{
+        padding: 0 60px 15px;
+    } 
 
 }
 
