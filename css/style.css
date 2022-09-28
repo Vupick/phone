@@ -274,6 +274,13 @@ margin-bottom: 20px;
         cursor: pointer;
         order: 1;
         position: relative;
+        z-index: 50;
+    }
+
+    .logo,
+    .phone{
+        position: relative;
+        z-index: 50;
     }
 
     .btn-line{
@@ -282,6 +289,7 @@ margin-bottom: 20px;
         width: 100%;
         background: #fff;
         height: 2px;
+        transition: .3s ease;
     }
 
     .btn-line:nth-child(1){
@@ -297,10 +305,40 @@ margin-bottom: 20px;
         top: 40px;
     }
 
-    .menu{
-        display: none;
+    .menu-open .btn-line:nth-child(1){
+        transform: scaleX(0);
+    }
+    .menu-open .btn-line:nth-child(2){
+        transform:rotate(45deg) ;
+    }
+    .menu-open .btn-line:nth-child(3){
+        transform:rotate(-45deg) ;
+    }
+    .menu-open .btn-line:nth-child(4){
+        transform: scaleX(0);
     }
 
+    .menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #0A0A0A;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: .3s ease;
+    }
+    .menu-open .menu{
+        transform: translateY(0);
+    }
+    .menu-item{
+        padding: 50px 0;
+        font-size: 56px;
+    }
     .images-new{
         display: none;
     }
@@ -346,24 +384,19 @@ margin-bottom: 20px;
         font-size: 34px;
         line-height: 42px;
     }
-
     .new-title, .color-title, .contact-title{
         font-size: 28px;
         line-height: 32px;
     }
-
-
     .headline-btn {
         font-size: 12px;
         line-height: 22px;
         padding: 16px 90px 16px;
     }
-    
     .color-item,
     .color-item img{
         width: 100%;
     }
-    
     .contacts-form p{
         padding: 0 10px;
     }
@@ -374,11 +407,26 @@ margin-bottom: 20px;
 
 }
 
+@media (max-width: 420px){
+    .nav{
+        flex-wrap: wrap;
+    }
+    .phone{
+        flex-basis: auto;
+        margin-top: 50px;
+        order: 3;
+        width: 100%;
+    }
+    .menu-item{
+        font-size: 32px;
+    }
+
+}
+
 @media (max-width: 375px){
     .contacts-form{
         padding: 50px 10px;
     }
-
      .contacts-form p{
         padding: 0 60px 15px;
     } 
